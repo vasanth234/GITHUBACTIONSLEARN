@@ -22,3 +22,6 @@ jobs:
 
       - name: deploy
         run: echo "deploy app"
+
+      - name: done
+        run: echo "completed"
