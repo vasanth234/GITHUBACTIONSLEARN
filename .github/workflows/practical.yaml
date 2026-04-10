@@ -1,12 +1,13 @@
 name: hello world
+
 on:
-    push:
-        branches:
-          - main
-          - develop
-    pull_request:
-        branches:
-          - main
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -14,7 +15,6 @@ jobs:
     steps:
       - name: build app
         run: echo "build app"
-    steps:
-      - name: test
-        run: echo "test app"
 
+      - name: test
+        run: echo "test ${{secrets.GENERATE}}"
